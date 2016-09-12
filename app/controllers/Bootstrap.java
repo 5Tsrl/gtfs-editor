@@ -123,7 +123,7 @@ public class Bootstrap extends Controller {
     	render();
     }
     
-    public static void createAgency( String gtfsId, String name, String url, @Required String timezone, @Required String language, String phone, Double defaultLat, Double defaultLon) throws Throwable {
+    public static void createAgency( String gtfsId, String name, String url, String timezone, String language, String phone, Double defaultLat, Double defaultLon) throws Throwable {
     	GlobalTx tx = VersionedDataStore.getGlobalTx();
     	
     	try {
@@ -133,6 +133,8 @@ public class Bootstrap extends Controller {
 	    	validation.required(gtfsId).message("Agency GTFS ID cannot be blank.");
 	    	validation.required(name).message("Agency name cannot be blank.");
 	    	validation.required(url).message("Agency URL cannot be blank.");
+			validation.required(timezone).message("Feed Timezone cannot be blank.");
+			validation.required(language).message("Feed Language cannot be blank.");
 	    	
 	    	if(validation.hasErrors()) {
 	    		params.flash();

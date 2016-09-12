@@ -4,6 +4,10 @@
   #{stylesheet 'leaflet/leaflet.css' /}
 #{/set}
 
+%{
+cf = play.Play.configuration
+}%
+
 <div class="container fill">
   <div class="row" style="padding-top: 100px;">
     <div class="offset4 span4">
@@ -12,15 +16,15 @@
 	
 				<img style="padding-bottom: 25px;" src="@{'/public/images/tdm_logo.png'}"/>
 				
-				<h3>Database Setup</h3>
-				<p><strong>Step 2: Create default agency</strong> 
+				<h3>&{'first-start.title'}</h3>
+				<p><strong>&{'first-start.step'} 2:</strong>  &{'first-start.newDefaultFeed'}</p>
 				
 
-				<p>Set Default Location:</p>
+				<p>&{'first-start.setDefaultLocation'}</p>
 				
 				<div id="map" style="height: 400px; width: 600px; margin-bottom: 25px;"></div>
 				
-			
+				<strong>&{'first-start.mandatoryField'}</strong>
 				#{form @createAgency()}
 					
 					<input type="hidden" name="defaultLat" value="" id="defaultLat"/>
@@ -35,7 +39,7 @@
 				
 
 				 <div class="control-group">
-				    <label for="gtfsId">GTFS Agency Id</label>
+				    <label for="gtfsId">GTFS Feed Id</label>
 				    <div class="controls">
 				      <input type="text" name="gtfsId" id="gtfsId" value="${flash.gtfsId}" />
 				    </div>
@@ -43,19 +47,33 @@
 
 
 				  <div class="control-group">
-				    <label for="name">Agency Name</label>
+				    <label for="name">&{'first-start.nameFeed'}</label>
 				    <div class="controls">
 				      <input type="text" name="name" id="name" value="${flash.name}" />
 				    </div>
 				  </div>
 				  
 				  <div class="control-group">
-				    <label for="url">Agency URL</label>
+				    <label for="url">&{'first-start.urlFeed'}</label>
 				    <div class="controls">
 				      <input type="text" name="url" id="url" value="${flash.url}" />
 				    </div>
 				  </div>
-				 
+				
+				  <div class="control-group">
+				    <label for="url">&{'first-start.timezoneFeed'}</label>
+				    <div class="controls">
+				      <input type="text" name="timezone" id="timezone" value="${flash.timezone}" />
+				    </div>
+				  </div>
+					 
+				  <div class="control-group">
+				    <label for="url">&{'first-start.languageFeed'}</label>
+				    <div class="controls">
+				      <input type="text" name="language" id="language" value="${flash.language}" />
+				    </div>
+				  </div>
+				 <!--
 				 <div class="control-group">
 				    <label for="timezone">Agency Timezone</label>
 				    <div class="controls">
@@ -677,7 +695,7 @@
 
 				 	</div>
 				 </div>
-
+				 -->
 			
 			
 					<p id="signin-field">
@@ -728,7 +746,7 @@
             mapZoom = 10;
         }
         else {
-            mapCenter = [0.0,0.0];
+            mapCenter = [45.07,7.6];
             mapZoom = 1;  
         }
 

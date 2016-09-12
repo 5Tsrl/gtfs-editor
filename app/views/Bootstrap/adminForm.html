@@ -1,7 +1,5 @@
 #{extends 'Secure/layout.html' /}
 
-
-
 <div class="container fill">
   <div class="row" style="padding-top: 100px;">
     <div class="offset4 span4">
@@ -10,9 +8,9 @@
 	
 				<img style="padding-bottom: 25px;" src="@{'/public/images/tdm_logo.png'}"/>
 				
-				<h3>Database Setup</h3>
-				<p><strong>Step 1:</strong> Create admin account
-				</p>
+				<!--<h3>Database Setup</h3>-->
+				<h3>&{'first-start.title'}</h3>
+				<p><strong>&{'first-start.step'} 1:</strong> &{'first-start.newAdminAccount'}</p>
 				#{form @createAdmin()}
 					
 					#{errors} 
@@ -39,7 +37,7 @@
 				  </div>
 				  
 				  <div class="control-group">
-				    <label for="password2">Password (retype):</label>
+				    <label for="password2">&{'first-start.pwdRetype'}</label>
 				    <div class="controls">
 				      <input type="password" name="password2" id="password2" value="" />
 				    </div>
@@ -58,10 +56,6 @@
 				     <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> &{'secure.remember'}
 				    </div>
 				  </div> -->
-
-
-				
-					</p>
 					<p id="signin-field">
 						<button type="submit" class="btn" id="signin"/>Next &raquo;</button>
 					</p>
