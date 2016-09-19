@@ -6,6 +6,7 @@ lib
 data
 logs
 eclipse
+nbproject/
 .classpath
 *.zip
 .settings/
@@ -16,3 +17,5 @@ dropAndRecreateDatabase.sh
 dump
 .idea
 db/
+
+

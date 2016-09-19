@@ -14,7 +14,10 @@
   #{stylesheet 'leaflet.draw/leaflet.draw.css' /}
   #{stylesheet 'leaflet.label/leaflet.label.css' /}
   #{stylesheet 'colorpicker/bootstrap-colorpicker.css' /}
-
+  #{stylesheet 'leaflet-geocoder-mapzen.min.css' /}
+	<!-- Load geocoding plugin after Leaflet -->
+	
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.4.1/leaflet-geocoder-mapzen.css">-->
   #{stylesheet 'route.css' /}
 #{/set}
 
@@ -968,14 +971,14 @@
   <script src="@{'/public/lib/jquery.serializeObject.min.js'}"></script>
 
 
-
+  
   #{script 'lib/leaflet.js' /}
   #{script 'lib/leaflet.draw.js' /}
   #{script 'lib/leaflet.label-src.js' /}
   #{script 'lib/leaflet.encoded-polyline.js' /}
   #{script 'lib/bootstrap-colorpicker.js' /}
   #{script 'lib/geolib.js' /}
-
+  #{script 'lib/leaflet-geocoder-mapzen.min.js' /}
   #{script 'lib/fileuploader.js' /}
 
  <!-- #{script 'lib/jquery.handsontable.full.js' /} -->
@@ -996,4 +999,5 @@
       GtfsEditor.RoutePage.init("${session.agencyId}");
     });
   </script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.4.1/leaflet-geocoder-mapzen.js"></script>-->
 #{/set}

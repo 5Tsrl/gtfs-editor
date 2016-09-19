@@ -3,6 +3,7 @@
 
 #{set 'styles'}
   #{stylesheet 'main.css' /}
+  #{stylesheet 'leaflet-geocoder-mapzen.min.css' /}
 #{/set}
 
 <script id="route-type-table-tpl" type="text/html">
@@ -118,7 +119,7 @@
 
   #{script 'models.js' /}
   #{script 'views/route-type-list-view.js' /}
-
+  #{script 'views/route-trippatterns-view.js' /}
   <script src="@{'/public/lib/jquery.serializeObject.min.js'}"></script>
 
   <script type="text/javascript">
@@ -129,7 +130,6 @@
       });
 
   </script>
-
 #{/set}
 
 

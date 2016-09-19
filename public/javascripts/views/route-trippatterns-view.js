@@ -115,20 +115,37 @@ var GtfsEditor = GtfsEditor || {};
         tileKey = G.config.mapboxKey;
 
 
-      var url = 'http://{s}.tiles.mapbox.com/v3/' + tileKey + '/{z}/{x}/{y}.png',
-
-          baseLayer = L.tileLayer(url, {
-            attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+     var url = 'http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png',
+          transportLayer = L.tileLayer(url, {
+            attribution: 'Data from <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors. Tiles from <a href="http://www.thunderforest.com/transport/">Andy Allan</a>'
           });
+		  
+	  var baseLayer= L.tileLayer('http://{s}.mz.5t.torino.it/hot/{z}/{x}/{y}.png', {attribution : 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'});
+	  var satLayer = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+					maxZoom: 20,
+					subdomains:['mt0','mt1','mt2','mt3']
+					});
 
       // Init the map
       this.map = L.map(this.$('#map').get(0), {
         center: G.session.mapCenter,
         zoom: G.session.mapZoom,
-        maxZoom: 19
+        maxZoom: 19,
+		layers:[baseLayer]
       });
-      this.map.addLayer(baseLayer);
-
+      //this.map.addLayer(baseLayer);
+	  
+	  this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+	  
+	  var options ={
+		  params: {"boundary.country": "ITA"},
+		  focus: true,
+		  layers: ["street", "locality"],
+		  
+	  }
+	  
+	  L.control.geocoder('search-EKATeVb', options).addTo(this.map);
+	  
       // Remove default prefix
       this.map.attributionControl.setPrefix('');
 
