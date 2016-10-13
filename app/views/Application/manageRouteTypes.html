@@ -7,10 +7,10 @@
 #{/set}
 
 <script id="route-type-table-tpl" type="text/html">
-  <tr><th>&{'manage.route-types.localized-vehicle-type'}</th><th>&{'manage.route-types.gtfs-route-type'}</th><th>&{'manage.route-types.hsv-route-type'}</th><th>&{'manage.route-types.description'}</th><th></th></tr>
+  <tr><th>&{'manage.route-types.localized-vehicle-type'}</th><th>&{'manage.route-types.gtfs-route-type'}</th><!--<th>&{'manage.route-types.hsv-route-type'}</th>--><th>&{'manage.route-types.description'}</th><th></th></tr>
   
   {{#routes}}
-		   <tr class="routeType"><td>{{localizedVehicleType}}</td><td>{{gtfsRouteType}}</td><td>{{hvtRouteType}}</td><td>{{routeType.description}}</td><td> <i class="icon-pencil route-type-edit" data-id="{{id}}"></i> <i class="icon-trash route-type-delete" data-id="{{id}}"></i></td></tr>
+		   <tr class="routeType"><td>{{localizedVehicleType}}</td><td>{{gtfsRouteType}}</td><!--<td>{{hvtRouteType}}</td>--><td>{{description}}</td><td> <i class="icon-pencil route-type-edit" data-id="{{id}}"></i> <i class="icon-trash route-type-delete" data-id="{{id}}"></i></td></tr>
   {{/routes}}
 </script>
 
@@ -50,7 +50,8 @@
 		    </select>
 			</div>
 		</div>
-
+		<input type="hidden" name="hvtRouteType" id="hvtRouteType" value="BUS" data-content="&{'manage.route-types.hsv-route-type-content'}"/>
+		<!--
 		<div class="control-group">
 			<label class="control-label" for="hvtRouteType"><strong>&{'manage.route-types.hsv-route-type'}</strong><br>(&{'shared.required'})</label>
 			<div class="controls">
@@ -74,7 +75,7 @@
 					<option value="BUS_REGIONAL">&{'shared.route-type.hvt.bus_regional'} (BUS_REGIONAL)</option>
 					<option value="BUS_EXPRESS">&{'shared.route-type.hvt.bus_express'} (BUS_EXPRESS)</option>
 					<option value="BUS_LOCAL">&{'shared.route-type.hvt.bus_local'} (BUS_LOCAL)</option>
-					<option value="BUS_UNSCHEDULED">&{'shared.route-type.hvt.bus_unscheduled'} (BUS_UNSCHEDULED)</option> <!-- not an existing option within GTFS extended spec -->
+					<option value="BUS_UNSCHEDULED">&{'shared.route-type.hvt.bus_unscheduled'} (BUS_UNSCHEDULED)</option> <!-- not an existing option within GTFS extended spec --><!--
 					<option value="TROLLEYBUS">&{'shared.route-type.hvt.trolleybus'} (TROLLEYBUS)</option>
 					<option value="TRAM">&{'shared.route-type.hvt.tram'} (TRAM)</option>
 					<option value="WATER">&{'shared.route-type.hvt.water'} (WATER)</option>
@@ -86,6 +87,7 @@
 					<option value="MISCELLANEOUS_HORSE_CARRIAGE">&{'shared.route-type.hvt.miscellaneous_horse_carriage'} (MISCELLANEOUS_HORSE_CARRIAGE)</option>
 			    </select>
 			</div>
+			-->
 </script>
 
 

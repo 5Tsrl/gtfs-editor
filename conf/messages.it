@@ -461,8 +461,8 @@ manage.route-types.create-new-type-button=Create New Type
 manage.route-types.localized-vehicle-type=Localized Vehicle Type
 manage.route-types.localized-vehicle-type-content=Localized Vehicle types are an extension to the GTFS specification that define names of transport services as understood by the public for a specific city or region (e.g. subway in Washington DC is known &quot;Metro&quot;, BRT in Mexico City is &quot;Metrobús&quot;). They should reflect the language and character set for a given location. Vehicle type referrers to the service provided not the operator or agency, although in some locations the vehicle type names and operator names may overlap.
 
-manage.route-types.description=Description
-manage.route-types.description-content=Description of route type
+manage.route-types.description=Descrizione
+manage.route-types.description-content=Descrizione del tipo di route
 
 manage.route-types.gtfs-route-type=GTFS Type
 manage.route-types.gtfs-route-type-content=The route_type field describes the type of transportation used on a route.
