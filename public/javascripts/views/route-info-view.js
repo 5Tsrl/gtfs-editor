@@ -4,6 +4,7 @@ var GtfsEditor = GtfsEditor || {};
   G.RouteInfoView = Backbone.View.extend({
     events: {
       'submit .route-info-form': 'save',
+	  'change input[name="gpxFile"]': 'onGPXAdded',
     },
 
     initialize: function (opts) {
@@ -20,6 +21,7 @@ var GtfsEditor = GtfsEditor || {};
       if (this.model) {
         this.setModel(this.model);
       }
+	  _.bindAll(this, 'onGPXAdded');
     },
 
     setModel: function(model) {
@@ -114,6 +116,22 @@ var GtfsEditor = GtfsEditor || {};
           }, this)
         });
     } */
+		onGPXAdded: function(evt) {
+	  var file = document.getElementById('gpxFile').files[0];
+        var reader = new FileReader();
+		
+		reader.readAsText(file);
+		
+        reader.onload = function(e)
+        {
+            gpxpath = e.target.result;
+			G.session.gpxpath = e.target.result;
+			
+			alert(G.session.gpxpath);
+        };
+//alert("G.session.gpxpath");
+      //this.render();
+    },
 
     save: function(evt){
       evt.preventDefault();

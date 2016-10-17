@@ -19,7 +19,9 @@ import datastore.AgencyTx;
 import datastore.GlobalTx;
 import play.Logger;
 
+//@JsonIgnoreProperties({"gpxFile","trip-pattern-add-gpx"})
 public class Route extends Model implements Cloneable, Serializable {
+	
 	public static final long serialVersionUID = 1;
 	
 	public String gtfsRouteId;
@@ -42,6 +44,8 @@ public class Route extends Model implements Cloneable, Serializable {
     public Boolean publiclyVisible;
 
     public String agencyId;
+	
+	@JsonIgnore public String gpxFile;
 
     //public GisRoute gisRoute;
 

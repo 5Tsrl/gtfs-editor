@@ -140,9 +140,9 @@ shared.attribute.none=Non Disponibile
 shared.attribute.agency=Must phone agency
 shared.attribute.driver=Must coordinate with driver
 
-shared.explore-search-routes=Explore/Search Routes
+shared.explore-search-routes=Esplora/Cerca Route
 shared.new-route=Nuova Route
-shared.schedule-exceptions=Manage Schedule Exceptions
+shared.schedule-exceptions=Gestisci Eccezioni di Schedulazione
 
 # GTFS entity names
 # The name of a trip pattern on a route with a route_long_name
@@ -153,37 +153,37 @@ gtfs.named-route-pattern=%s to %s (%s stops)
 gtfs.unnamed-route-pattern=to %s ({%s stops)
 
 # /exceptions
-exception.add-date=Add date
-exception.remove-date=Remove date
-exception.name=Exception name
+exception.add-date=Aggiungi data
+exception.remove-date=Rimuovi data
+exception.name=Nome dell'eccezione
 exception.no_service=No service
-exception.custom=Custom schedule
-exception.dates=On these dates
-exception.exemplar=run the following schedule
-exception.custom-schedule=run the following calendars
-exception.new=New exception
-exception.enter-date=Please enter at least one date for this exception
+exception.custom=Pianificazione personalizzata
+exception.dates=Su queste date
+exception.exemplar=esegui la seguente pianificiazione
+exception.custom-schedule=esegui i seguenti calendari
+exception.new=Nuova eccezione
+exception.enter-date=Aggiungere almeno una data per questa eccezione
 
 # /snapshots
-snapshot.version=Version
+snapshot.version=Versione
 snapshot.for=Snapshots for
-snapshot.new=Take snapshot
-snapshot.restore=Restore snapshot
-snapshot.name=Name
-snapshot.comment=Comment
-snapshot.date=Snapshot date
+snapshot.new=Cattura snapshot
+snapshot.restore=Ripristina snapshot
+snapshot.name=Nome
+snapshot.comment=Commento
+snapshot.date=Data dello snapshot
 snapshot.snapshots=Snapshots
-snapshot.take-before-restore=You must create a snapshot of the current state of the database before you can restore a previous version.
+snapshot.take-before-restore=Bisogna creare un nuovo snapshot dello stato corrente del database prima che si possa ripristinare una versione precedente.
 # dialog title
-snapshot.take-snapshot=Take snapshot
+snapshot.take-snapshot=Cattura snapshot
 # button
-snapshot.take=Take snapshot
-snapshot.take-and-restore=Take snapshot and restore
+snapshot.take=Cattura snapshot
+snapshot.take-and-restore=Cattura snapshot e ripristina
 snapshot.current=Current?
-snapshot.restore-stops=The following stops had been deleted and were restored
-snapshot.valid-from=Valid from
-snapshot.valid-to=Valid to
-snapshot.download=Export GTFS
+snapshot.restore-stops=I seguenti stops erano stati cancellati e sono stati ripristinati
+snapshot.valid-from=Valido da
+snapshot.valid-to=Valido per
+snapshot.download=Esporta GTFS
 
 # /index
 
@@ -194,34 +194,34 @@ route.edit-route.title=Modifica Route
 
 route.steps-header=Passi per aggiungere una nuova Route
 
-route.step1=Basic Info
+route.step1=Informazioni di Base
 route.step2=Stops/Stazione
 route.step3=Trip Patterns
-route.step4=Schedules
+route.step4=Pianificazioni
 route.step5=Review
 
 route.filter-stops=Filter Stops
 
-route.filter-stops-by-agency=Show only stops for
+route.filter-stops-by-agency=Mostra gli stop solo per
 
-route.filter-all-stops=Show all stops
-route.filter-hidden-stops=Some stops may be hidden at current zoom level.
-
+route.filter-all-stops=Mostra tutti gli stop
+route.filter-hidden-stops=Alcuni stop potrebbero essere nascosti al livello di zoom corrente.
+route.add-GPX-label=Inserisci traccia GPX:
 
 
 # step 1
 
-route.route-info-tpl.agency=Agency
+route.route-info-tpl.agency=Feed
 
 route.route-info-tpl.gtfs-id=GTFS Id
 
-route.route-info-tpl.short-name=Short Name
+route.route-info-tpl.short-name=Nome breve
 route.route-info-tpl.short-name-content=The route_short_name contains the short name of a route. This will often be a short, abstract identifier like &quot;32&quot;, &quot;100X&quot;, or &quot;Green&quot; that riders use to identify a route, but which doesn't give any indication of what places the route serves.
 
-route.route-info-tpl.long-name=Long Name
+route.route-info-tpl.long-name=Nome esteso
 route.route-info-tpl.long-name-content=The route_long_name contains the full name of a route. This name is generally more descriptive than the route_short_name and will often include the route's destination or stop. If the route does not have a long name, please specify a route_short_name and use an empty string as the value for this field.
 
-route.route-info-tpl.route-type=Route Type
+route.route-info-tpl.route-type=Tipo di Route 
 route.route-info-tpl.route-type-content=The route_type field describes the type of transportation used on a route.
 
 route.route-info-tpl.description=Description

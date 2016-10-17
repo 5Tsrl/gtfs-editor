@@ -35,10 +35,10 @@
   </div>
   <div id="route-type-modal-body" class="modal-body">
      <table class="table table">
-      <tr><th>&{'manage.route-types.localized-vehicle-type'}</th><th>&{'manage.route-types.gtfs-route-typ'}</th><th>&{'manage.route-types.hsv-route-type'}</th><th>&{'manage.route-types.description'}</th></tr>
+      <tr><th>&{'manage.route-types.localized-vehicle-type'}</th><th>&{'manage.route-types.gtfs-route-type'}</th><!--<th>&{'manage.route-types.hsv-route-type'}</th>--><th>&{'manage.route-types.description'}</th></tr>
 
       #{list items:routeTypes, as:'routeType'}
-          <tr><td>${routeType.localizedVehicleType}</td><td>${routeType.gtfsRouteType}</td><td>${routeType.hvtRouteType}</td><td>${routeType.description}</td></tr>
+          <tr><td>${routeType.localizedVehicleType}</td><td>${routeType.gtfsRouteType}</td><!--<td>${routeType.hvtRouteType}</td>--><td>${routeType.description}</td></tr>
       #{/list}
 
     </table>
@@ -72,7 +72,7 @@
       <select required name="routeTypeId" id="routeTypeId" class="input-xlarge" title="&{'route.route-info-tpl.route-type'}" data-content="&{'route.route-info-tpl.route-type-content'}">
 
         #{list items:routeTypes, as:'routeType'}
-            <option value="${routeType.id}">${routeType.localizedVehicleType} (${routeType.hvtRouteType})</option>
+            <option value="${routeType.id}">${routeType.localizedVehicleType}<!-- (${routeType.hvtRouteType})--></option>
         #{/list}
 
       </select>
@@ -117,6 +117,13 @@
     <div class="controls">
       <input type="text" name="routeTextColor" id="routeTextColor" class="input-small colorpicker" value="{{routeTextColor}}" title="&{'route.route-info-tpl.route-text-color'}" data-content="&{'route.route-info-tpl.route-text-color-content'}">
     </div>
+  </div>
+  
+  <div class="control-group">
+	<label class="control-label">&{'route.add-GPX-label'}</label>
+	<div class="controls">
+		<input name="gpxFile" id="gpxFile" type="file" />
+	</div>
   </div>
 
 <!--  <div class="control-group">
@@ -905,6 +912,12 @@
 <script id="trippatterns-sidebar-tpl" type="text/html">
   <div>
     <p class="text-warning" id="stops-hidden-message">&{'route.filter-hidden-stops'}</p>
+	
+	<!--<div>
+		<p>&{'route.add-GPX-label'}<p>
+		<input name="gpxFile" id="gpxFile" type="file" />
+		<input type="button" class="btn" name="trip-pattern-add-gpx" id="trip-pattern-add-gpx" value="Inserisci traccia">
+	</div>-->
 
     <div class="trippattern-details well">
 
@@ -981,6 +994,7 @@
   #{script 'lib/bootstrap-colorpicker.js' /}
   #{script 'lib/geolib.js' /}
   #{script 'lib/leaflet-geocoder-mapzen.min.js' /}
+  #{script 'lib/gpx.js' /}
   #{script 'lib/fileuploader.js' /}
 
  <!-- #{script 'lib/jquery.handsontable.full.js' /} -->

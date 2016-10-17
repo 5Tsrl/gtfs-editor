@@ -105,9 +105,16 @@ var GtfsEditor = GtfsEditor || {};
         maxZoom: 19,
 		layers:[baseLayer]
       });
-      //this.map.addLayer(baseLayer);
-	  //this.map.addLayer(transportLayer);
-	  this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+      if(G.session.gpxpath === null)
+		this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+	  else{
+		 
+		var gpx = gpxpath; // URL to your GPX file or the GPX itself
+		new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+		  this.map.fitBounds(e.target.getBounds());
+		}).addTo(this.map);	
+		this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+	  }
 	  
 	  var options ={
 		  params: {"boundary.country": "ITA"},

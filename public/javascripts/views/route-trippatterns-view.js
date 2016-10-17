@@ -24,7 +24,6 @@ var GtfsEditor = GtfsEditor || {};
       'change #trip-pattern-stop-select': 'onTripPatternStopSelectChange',
       'change input[name="stopFilterRadio"]': 'onStopFilterChange',
       'change #transit-wand-select': 'updateTransitWandOverlay',
-
       'change input[name="trip-pattern-use-satellite"]': 'onSatelliteToggle'
     },
 
@@ -103,6 +102,9 @@ var GtfsEditor = GtfsEditor || {};
       }
 
       this.$('.route-sidebar').html(ich['trippatterns-sidebar-tpl'](sidebarData));
+	  
+	  //route-info-tpl
+	  this.$('.step-info').html(ich['route-info-tpl']());
       this.$('.step-instructions').html(ich['trippatterns-instructions-tpl']());
 
       this.$(".collapse").collapse()
@@ -134,8 +136,21 @@ var GtfsEditor = GtfsEditor || {};
 		layers:[baseLayer]
       });
       //this.map.addLayer(baseLayer);
-	  
-	  this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+	  if(G.session.gpxpath === null)
+		this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+	  else{
+		 
+		var gpx = gpxpath; // URL to your GPX file or the GPX itself
+		new L.GPX(gpx, {async: true, marker_options: {
+    startIconUrl: 'images/pin-icon-start.png',
+    endIconUrl: 'images/pin-icon-end.png',
+    shadowUrl: 'images/pin-shadow.png'
+  }
+}).on('loaded', function(e) {
+		  this.map.fitBounds(e.target.getBounds());
+		}).addTo(this.map);	
+		this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
+	  }
 	  
 	  var options ={
 		  params: {"boundary.country": "ITA"},
@@ -244,7 +259,7 @@ var GtfsEditor = GtfsEditor || {};
       this.render();
 
     },
-
+	
     loadTransitWand: function(evt) {
 
         var view = this;
@@ -1158,6 +1173,6 @@ var GtfsEditor = GtfsEditor || {};
       while (s.length < size) s = "0" + s;
       return s;
     }
-
+	
   });
 })(GtfsEditor, jQuery, ich);
