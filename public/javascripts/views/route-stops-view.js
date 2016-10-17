@@ -1,4 +1,5 @@
 var GtfsEditor = GtfsEditor || {};
+var gpxpath;
 
 (function(G, $, ich) {
   G.RouteStopsView = Backbone.View.extend({

@@ -107,7 +107,7 @@ var GtfsEditor = GtfsEditor || {};
 	  this.$('.step-info').html(ich['route-info-tpl']());
       this.$('.step-instructions').html(ich['trippatterns-instructions-tpl']());
 
-      this.$(".collapse").collapse()
+      this.$(".collapse").collapse();
 
 
       var tileKey;

@@ -127,10 +127,8 @@ var GtfsEditor = GtfsEditor || {};
             gpxpath = e.target.result;
 			G.session.gpxpath = e.target.result;
 			
-			alert(G.session.gpxpath);
+			//alert(G.session.gpxpath);
         };
-//alert("G.session.gpxpath");
-      //this.render();
     },
 
     save: function(evt){
