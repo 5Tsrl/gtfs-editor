@@ -11,8 +11,9 @@ secure.logout=You have been logged out.
 # for OAuth'ed users coming from Data Manager
 secure.anonymous=Anonymous user
 
-
-application.name=Transit Database
+#roberta
+#application.name=Transit Database
+application.name=Cafe'
 
 # nav-bar
 
@@ -31,6 +32,20 @@ nav-bar.user-guide=User Guide
 nav-bar.video-tutorial=Video Tutorial
 
 nav-bar.language=Language
+
+#lorenzo
+# first-start
+first-start.title=First Start: Initialization
+first-start.step=Step
+first-start.newAdminAccount=Create an Admin Account
+first-start.pwdRetype=Retype Password:
+first-start.newDefaultFeed=Create new default Feed
+first-start.setDefaultLocation=Set default location:
+first-start.mandatoryField=Mandatory field:
+first-start.languageFeed=Feed language:
+first-start.timezoneFeed=Feed Timezone:
+first-start.urlFeed=Feed url:
+first-start.nameFeed=Feed name:
 
 # shared
 
@@ -68,6 +83,7 @@ shared.route-type.cable-car=Cable Car
 shared.route-type.gondola=Gondola
 shared.route-type.funicular=Funicular
 
+#tolto
 shared.route-type.hvt.rail=Railway Service
 shared.route-type.hvt.rail_hs=High Speed Rail Service
 shared.route-type.hvt.rail_ld=Long Distance Trains
@@ -96,8 +112,6 @@ shared.route-type.hvt.funicular=Funicular Service
 shared.route-type.hvt.miscellaneous=Miscellaneous Service
 shared.route-type.hvt.miscellaneous_cable_car=Cable Car
 shared.route-type.hvt.miscellaneous_horse_carriage=Horse-Drawn Carriage
-
-
 
 shared.details=Details
 
@@ -194,6 +208,8 @@ route.filter-stops-by-agency=Show only stops for
 route.filter-all-stops=Show all stops
 route.filter-hidden-stops=Some stops may be hidden at current zoom level.
 
+#lorenzo
+route.add-GPX-label=Add GPX track:
 
 
 # step 1
