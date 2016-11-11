@@ -3,23 +3,23 @@
 <div class="container fill">
   <div class="row" style="padding-top: 100px;">
     <div class="offset4 span4">
-      
+
     		<div class="">
-	
-				<img style="padding-bottom: 25px;" src="@{'/public/images/tdm_logo.png'}"/>
-				
+
+				<img style="padding-bottom: 25px;" src="@{'/public/images/logoTransitCafe.svg'}"/>
+
 				<!--<h3>Database Setup</h3>-->
 				<h3>&{'first-start.title'}</h3>
 				<p><strong>&{'first-start.step'} 1:</strong> &{'first-start.newAdminAccount'}</p>
 				#{form @createAdmin()}
-					
-					#{errors} 
+
+					#{errors}
 						<p class="alert alert-error">
 							${error}
 						</p>
 					 #{/errors}
-					
-				
+
+
 
 				 <div class="control-group">
 				    <label for="username">&{'secure.username'}</label>
@@ -35,14 +35,14 @@
 				      <input type="password" name="password" id="password" value="" />
 				    </div>
 				  </div>
-				  
+
 				  <div class="control-group">
 				    <label for="password2">&{'first-start.pwdRetype'}</label>
 				    <div class="controls">
 				      <input type="password" name="password2" id="password2" value="" />
 				    </div>
 				  </div>
-				  
+
 				   <div class="control-group">
 				    <label for="emal">Email</label>
 				    <div class="controls">
@@ -51,7 +51,7 @@
 				  </div>
 
 				 <!--  <div class="control-group">
-				    
+
 				    <div class="controls">
 				     <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> &{'secure.remember'}
 				    </div>
