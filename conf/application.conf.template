@@ -48,7 +48,7 @@ application.secret=2iZv7pgDAWeYrdKSI0OuyORzReMLLMLO58YzbK2lXoPHEUwdTGfJSZhiKqsZ2
 # ~~~~~
 # Define locales used by your application.
 # You can then place localized messages in conf/messages.{locale} files
-application.langs=en,es,cn
+application.langs=it,en,es,cn
 
 # Date format
 # ~~~~~
