@@ -2,3 +2,10 @@
 .active, #firstContainer, #aFisrtTag{
 	background-color: tan;
 }
+.brand{
+	width: 190px;
+	height: 40px;
+	background: url(/public/images/logoTransitCafe.svg) no-repeat 0 0;
+	display: block;
+	background-size: contain;
+}
