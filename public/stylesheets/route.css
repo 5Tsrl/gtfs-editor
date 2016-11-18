@@ -8,11 +8,10 @@
 
 #route-nav:after {
   z-index: -1;
-  background-color: #ddd;
+  background-color: #c5b8af;/*5t*/
   height: 2px;
-
   position: absolute;
-  top: 8px;
+  top: 17px; /*5t*/
   left: 18%;
   width: 64%;
   margin: 0;
@@ -27,8 +26,8 @@
 
 #route-nav li a {
   display: inline;
-  background-color: #ddd;
-  color: #777;
+  background-color: #dcd4cf;
+  color: #9a8373;
   text-decoration: none;
   text-shadow: 0 1px 0 white;
 
@@ -38,28 +37,31 @@
 }
 
 #route-nav li.active a {
-  background-color: #08C;
+  /*background-color: #08C;*/
+  background-color: #704f38; /*5t*/
   color: #fff;
   text-shadow: none;
 }
 
 #route-nav li.active a:hover {
-  background-color: #08C;
+  /*background-color: #08C;*/
+  background-color: #704f38; /*5t*/
 }
 
 #route-nav li a:hover {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  background-color: #c5b8af; /*5t*/
 }
 
 #route-header .route-nav-label {
   padding: 1.0em 0.5em;
 }
 
-
 #route-nav li.disabled a {
-
-  background-color: #efefef;
-  color: #ccc;
+  /*background-color: #efefef*/;
+  background-color: #ede9e7;
+  /*color: #ccc;*/
+  color: #c5b8af;/*5t*/
   text-shadow: none;
 }
 
@@ -69,7 +71,8 @@
 }
 
 #route-header li.disabled .route-nav-label {
-  color: #ccc;
+  /*color: #ccc;*/
+  color: #c5b8af; /*5t*/
 }
 
 #map {
@@ -88,7 +91,7 @@
 }
 
 .route-context .row-fluid {
-  background-color: #ddd;
+  background-color: #ede9e7;;
 }
 
 .route-summary-details strong {
@@ -125,7 +128,7 @@
     border-top: 45px solid transparent;
     border-bottom: 45px solid transparent;
 
-    border-left: 30px solid #ddd;
+    border-left: 30px solid #ede9e7;
   }
 
 }

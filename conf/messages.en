@@ -47,6 +47,20 @@ first-start.timezoneFeed=Feed Timezone:
 first-start.urlFeed=Feed url:
 first-start.nameFeed=Feed name:
 
+#home by roberta
+#get.start=Getting Started
+get.welcome=Welcome to Transit Cafe', the new GTFS Editor.
+info.gtfs=The General Transit Feed Specification (GTFS) defines a common data format for public transportation routes. GTFS "feeds" allow public transit agencies to publish their transit data and developers to write applications that use that data in an standardized way. GTFS can be used to power trip planners, time table publishers, and a variety of applications.
+how.start=How do I start?
+how.basicinfo=Once you have some basic information about a route, click on
+how.nroute=New Route
+above.start=above to get started.
+info.view=To view all current routes for your agency or find a route to edit, click on
+info.explore=Explore/Search Routes.
+have.question=Have a Question?
+get.help=Click on Help icons on next to any step to view instructions or tips.
+#info.contacts=Or select Contacts above to send a question or comment to an administrator. If you have any suggestions or issues please let us know!
+
 # shared
 
 shared.optional=Optional

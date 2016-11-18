@@ -10,24 +10,21 @@
 #{/set}
 
 
-<div class="row-fluid">
+<div class="row-fluid cup_back">
   <div class="span9">
-    <h2>Getting Started</h2>
+    <!--<h2>&{'get.start'}</h2>-->
+      <h3>&{'get.welcome'}</h3>
+      <p>&{'info.gtfs'}</p>
 
-    <h4>Welcome to GTFS Editor.</h4>
-    <p>The General Transit Feed Specification (GTFS) defines a common data format for public transportation routes. GTFS "feeds" allow public transit agencies to publish their transit data and developers to write applications that use that data in an standardized way. GTFS can be used to power trip planners, time table publishers, and a variety of applications.</p>
+      <h4>&{'how.start'}</h4>
+      <p>&{'how.basicinfo'} <a href="@{Application.route()}">&{'how.nroute'}</a> &{'above.start'}</p>
 
-    <h4>How do I start?</h4>
-    <p>Once you have some basic information about a route, click on <a href="@{Application.route()}">New Route</a> above to get started.</p>
+      <p>&{'info.view'} <a href="@{Application.search()}">&{'info.explore'}</a></p>
 
-    <p>To view all current routes for your agency or find a route to edit, click on <a href="@{Application.search()}">Explore/Search
-     Routes</a> above.</p>
+      <h4>&{'have.question'}</h4>
+      <p>&{'get.help'}</p>
 
-    <h4>Have a Question?</h4>
-    <p>Click on Help icons on next to any step to view instructions or tips.</p>
-
-    <p>Or select Contacts above to send a question or comment to an administrator. If you have any suggestions or issues please let us know!</p>
-
+      <!---<p>&{'info.contacts'}</p>-->
   </div>
-  
+
 </div>

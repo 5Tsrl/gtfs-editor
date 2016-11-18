@@ -13,7 +13,7 @@ secure.anonymous=Utente anonimo
 
 #roberta
 #application.name=Transit Database
-application.name=Cafe'
+application.name=Transit Cafe'
 
 # nav-bar
 
@@ -47,8 +47,21 @@ first-start.timezoneFeed=Timezone del Feed:
 first-start.urlFeed=Url del Feed:
 first-start.nameFeed=Nome del Feed:
 
-# shared
+#home by roberta
+#get.start=Iniziamo
+get.welcome=Benvenuto su Transit Cafe', il nuovo editor di GTFS.
+info.gtfs=Il formato GTFS definisce un formato di dati utilizzabile per fornire informazioni sui mezzi di trasporto. I feed GTFS permettono alle aziende di trasporto di pubblicare i loro dati, rendendoli disponibili all'utenza. Il GTFS può essere usato per arricchire calcola percorsi, tabelle orari e molti servizi derivati.
+how.start=Un aiuto per iniziare?
+how.basicinfo=Se hai informazioni su una route, clicca su
+how.nroute=Nuova Route
+above.start=per iniziare.
+info.view=Per visualizzare le route di una agency o individuare una route da modificare, clicca su
+info.explore=Esplora/Cerca Route.
+have.question=Hai dubbi?
+get.help=Clicca sul tasto Guida per istruzioni o consigli.
+#info.contacts=O seleziona Contacts above to send a question or comment to an administrator. If you have any suggestions or issues please let us know!
 
+# shared
 shared.optional=Opzionale
 shared.required=Richiesto
 
@@ -83,7 +96,7 @@ shared.route-type.cable-car=Cable Car
 shared.route-type.gondola=Gondola
 shared.route-type.funicular=Funicular
 
-#tolto 
+#tolto
 shared.route-type.hvt.rail=Servizio Ferroviario
 shared.route-type.hvt.rail_hs=High Speed Rail Service
 shared.route-type.hvt.rail_ld=Long Distance Trains
@@ -143,7 +156,7 @@ shared.attribute.driver=Must coordinate with driver
 
 shared.explore-search-routes=Esplora/Cerca Route
 shared.new-route=Nuova Route
-shared.schedule-exceptions=Gestisci eccezioni del calendario programmato      #controllare
+shared.schedule-exceptions=Gestisci eccezioni del calendario programmato
 
 # GTFS entity names
 # The name of a trip pattern on a route with a route_long_name
