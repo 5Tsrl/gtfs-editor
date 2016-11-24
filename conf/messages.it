@@ -25,7 +25,12 @@ nav-bar.user-greeting=Benvenuto %s!
 nav-bar.export=Esporta
 nav-bar.admin=Amministrazione
 
+nav-bar.change.psw=Cambia Password
 nav-bar.logout=Logout
+
+#language
+lng.ita=Italiano
+lng.eng=Inglese
 
 nav-bar.help=Guida
 nav-bar.user-guide=Guida Utente
@@ -173,7 +178,7 @@ exception.name=Nome dell'eccezione
 exception.no_service=Nessun servizio
 exception.custom=Pianificazione personalizzata
 exception.dates=Su queste date
-exception.exemplar=Esegui la seguente pianificiazione
+exception.exemplar=Esegui la seguente pianificazione
 exception.custom-schedule=Esegui i seguenti calendari
 exception.new=Nuova eccezione
 exception.enter-date=Aggiungere almeno una data per questa eccezione
@@ -193,10 +198,10 @@ snapshot.take-snapshot=Cattura snapshot
 # button
 snapshot.take=Cattura snapshot
 snapshot.take-and-restore=Cattura snapshot e ripristina
-snapshot.current=Current?
+snapshot.current=Corrente
 snapshot.restore-stops=I seguenti stops erano stati cancellati e sono stati ripristinati
-snapshot.valid-from=Valido da
-snapshot.valid-to=Valido per
+snapshot.valid-from=Valido dal
+snapshot.valid-to=Valido fino al
 snapshot.download=Esporta GTFS
 
 # /index

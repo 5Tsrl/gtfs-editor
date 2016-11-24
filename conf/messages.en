@@ -25,7 +25,12 @@ nav-bar.user-greeting=Welcome %s!
 nav-bar.export=Export
 nav-bar.admin=Admin
 
+nav-bar.change.psw=Change Password
 nav-bar.logout=Logout
+
+#language
+lng.ita=Italian
+lng.eng=English
 
 nav-bar.help=Guide
 nav-bar.user-guide=User Guide

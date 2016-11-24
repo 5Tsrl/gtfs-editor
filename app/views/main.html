@@ -26,10 +26,10 @@ cf = play.Play.configuration
 
     <link rel="stylesheet" media="screen" href="@{'/public/lib/bootstrap-2.3.1/css/bootstrap.css'}">
     <link rel="stylesheet" media="screen" href="@{'/public/lib/pnotify-1.2.0/jquery.pnotify.default.css'}">
-	
+
 
     #{get 'styles' /}
-	
+
 	<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/style5t.css'}">
     <!--   <link rel="stylesheet" media="screen" href="@{'/public/lib/bootstrap-2.1.1/css/bootstrap-responsive.min.css'}">-->
 
@@ -107,7 +107,7 @@ cf = play.Play.configuration
                 </a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="@{'/public/docs/user_guide.pdf'}" target="_blank" role="button">&{'nav-bar.user-guide'}</a></li>
-                  <li><a href="/documentation/editor/video" target="_blank" role="button">&{'nav-bar.video-tutorial'}</a></li>
+                  <!--<li><a href="/documentation/editor/video" target="_blank" role="button">&{'nav-bar.video-tutorial'}</a></li>-->
                 </ul>
               <li>
             </ul>
@@ -120,10 +120,10 @@ cf = play.Play.configuration
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#" class="lang-select" data-lang="it">Italiano</a></li>
-                  <li><a href="#" class="lang-select" data-lang="cn">中国的</a></li>
-                  <li><a href="#" class="lang-select" data-lang="en">English</a></li>
-                  <li><a href="#" class="lang-select" data-lang="es">Español</a></li>
+                  <li><a href="#" class="lang-select" data-lang="it">&{'lng.ita'}</a></li>
+                  <!--<li><a href="#" class="lang-select" data-lang="cn">中国的</a></li>
+                  <li><a href="#" class="lang-select" data-lang="es">Español</a></li>-->
+                  <li><a href="#" class="lang-select" data-lang="en">&{'lng.eng'}</a></li>
                 </ul>
               </li>
             </ul>
@@ -134,7 +134,7 @@ cf = play.Play.configuration
                   <i class="icon-user"></i>&{'nav-bar.user-greeting', user}<b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="@{Application.changePassword}">Change Password</a></li>
+                  <li><a href="@{Application.changePassword}">&{'nav-bar.change.psw'}</a></li>
                   <li><a href="@{Secure.logout}">&{'nav-bar.logout'}</a></li>
                 </ul>
               </li>

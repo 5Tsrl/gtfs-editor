@@ -102,7 +102,7 @@ var GtfsEditor = GtfsEditor || {};
       }
 
       this.$('.route-sidebar').html(ich['trippatterns-sidebar-tpl'](sidebarData));
-	  
+
 	  //route-info-tpl
 	  this.$('.step-info').html(ich['route-info-tpl']());
       this.$('.step-instructions').html(ich['trippatterns-instructions-tpl']());
@@ -121,7 +121,7 @@ var GtfsEditor = GtfsEditor || {};
           transportLayer = L.tileLayer(url, {
             attribution: 'Data from <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors. Tiles from <a href="http://www.thunderforest.com/transport/">Andy Allan</a>'
           });
-		  
+
 	  var baseLayer= L.tileLayer('http://{s}.mz.5t.torino.it/hot/{z}/{x}/{y}.png', {attribution : 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'});
 	  var satLayer = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
 					maxZoom: 20,
@@ -139,7 +139,7 @@ var GtfsEditor = GtfsEditor || {};
 	  if(G.session.gpxpath === null)
 		this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
 	  else{
-		 
+
 		var gpx = gpxpath; // URL to your GPX file or the GPX itself
 		new L.GPX(gpx, {async: true, marker_options: {
     startIconUrl: 'images/pin-icon-start.png',
@@ -148,19 +148,19 @@ var GtfsEditor = GtfsEditor || {};
   }
 }).on('loaded', function(e) {
 		  this.map.fitBounds(e.target.getBounds());
-		}).addTo(this.map);	
+		}).addTo(this.map);
 		this.map.addControl(L.control.layers({"Mappa":baseLayer, "Trasporti":transportLayer, "Satellite":satLayer}));
 	  }
-	  
+
 	  var options ={
 		  params: {"boundary.country": "ITA"},
 		  focus: true,
 		  layers: ["street", "locality"],
-		  
+		  url:"https://map.muoversinpiemonte.it"  
 	  }
-	  
+
 	  L.control.geocoder('search-EKATeVb', options).addTo(this.map);
-	  
+
       // Remove default prefix
       this.map.attributionControl.setPrefix('');
 
@@ -259,7 +259,7 @@ var GtfsEditor = GtfsEditor || {};
       this.render();
 
     },
-	
+
     loadTransitWand: function(evt) {
 
         var view = this;
@@ -1173,6 +1173,6 @@ var GtfsEditor = GtfsEditor || {};
       while (s.length < size) s = "0" + s;
       return s;
     }
-	
+
   });
 })(GtfsEditor, jQuery, ich);

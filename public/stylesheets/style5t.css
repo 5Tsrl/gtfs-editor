@@ -187,3 +187,13 @@ legend {
 legend small {
   color: #ede9e7;
 }
+
+.control-group.info .control-label, .control-group.info .help-block, .control-group.info .help-inline {
+  color: #704f38;
+}
+.control-group.info .checkbox, .control-group.info .radio, .control-group.info input, .control-group.info select, .control-group.info textarea {
+  color: #704f38;
+}
+.control-group.info input, .control-group.info select, .control-group.info textarea {
+  border-color: #704f38;
+}
